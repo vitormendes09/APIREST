@@ -4,3 +4,17 @@
 # @name AppControllerGetHello
 
 Get {{baseUri}}/home/hello
+
+### ConceitosManualController HOME
+
+# @name ConceitosManualController
+Get {{baseUri}}/conceitos-manual
+
+### ConceitosAutomáticosController HOME
+
+# @name ConceitosAutomaticosController
+Get {{baseUri}}/conceitos-automaticos/
+
+# Verifique o valor de baseUri
+# @name CheckBaseUri
+Get {{baseUri}}

@@ -1,4 +1,9 @@
 import { Module } from '@nestjs/common';
+import { ConceitosAutomaticosController } from './conceitos-automaticos.controller';
 
-@Module({})
-export class ConceitosAutomaticosModule {}
+@Module({
+  controllers: [ConceitosAutomaticosController]
+})
+export class ConceitosAutomaticosModule {
+  
+}
