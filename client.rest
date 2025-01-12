@@ -5,16 +5,7 @@
 
 Get {{baseUri}}/home/hello
 
-### ConceitosManualController HOME
+# Recados
+###
 
-# @name ConceitosManualController
-Get {{baseUri}}/conceitos-manual
-
-### ConceitosAutomáticosController HOME
-
-# @name ConceitosAutomaticosController
-Get {{baseUri}}/conceitos-automaticos/
-
-# Verifique o valor de baseUri
-# @name CheckBaseUri
-Get {{baseUri}}
+GET {{baseUri}}/recados/1

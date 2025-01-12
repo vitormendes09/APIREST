@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ConceitosManualModel } from 'src/conceitos-manual/conceitos-manual.model';
-import { ConceitosAutomaticosController } from 'src/conceitos-automaticos/conceitos-automaticos.controller';
+import { RecadosModule } from 'src/recados/recados.module';
+
 
 @Module({
-  imports: [ConceitosManualModel],
-  controllers: [AppController, ConceitosAutomaticosController],
+  imports: [RecadosModule],
+  controllers: [AppController],
   providers: [AppService],
   exports: [],
 })
