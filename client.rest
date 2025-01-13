@@ -9,3 +9,28 @@ Get {{baseUri}}/home/hello
 ###
 
 GET {{baseUri}}/recados/1
+
+###
+
+POST {{baseUri}}/recados
+Content-Type: application/json
+
+{
+    "titulo": "Recado 1",
+    "descricao": "Descrição do recado 1"
+}
+
+###
+
+PATCH {{baseUri}}/recados/1
+Content-Type: application/json
+
+{
+    "titulo": "Recado 1",
+    "descricao": "Descrição do recado 3"
+}
+
+
+###
+
+DELETE {{{baseUri}}}/recados/1
