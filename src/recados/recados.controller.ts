@@ -8,13 +8,15 @@ import {
   Post,
   Query,
 } from '@nestjs/common';
+import { RecadoService } from './Recados.serice';
 
 @Controller('recados')
 export class RecadosController {
+  constructor(private readonly recadoService: RecadoService) {}
   @Get()
   findAll(@Query() pagination: any) {
     const { limit = 10, offset = 0 } = pagination;
-    return 'This action returns all recados';
+    return this.recadoService.hello;
   }
 
   @Get(':id')
