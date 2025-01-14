@@ -3,7 +3,8 @@
 
 # @name AppControllerGetHello
 
-Get {{baseUri}}/home/hello
+Get {{baseUri}}/recados
+
 
 # Recados
 ###

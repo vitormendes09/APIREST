@@ -1,4 +1,19 @@
 {
+  "arrowParens": "avoid",
+  "blacketSpacing": "true",
+  "HtmlwhitespaceSensivity ": "css ",
+  "insertProga": false,
   "singleQuote": true,
-  "trailingComma": "all"
+  "trailingComma": "all",
+  "jsxSingleQuote": true,
+  "jsxBacketSameLite": false,
+  "printWidth": 80,
+  "proseWrap": "always",
+
+  "quoteProps": "as-needed",
+  "reuirePragma": false,
+  "semi": true,
+  "tabwidth":2,
+  "trallingComma": "all",
+  "useTabs":false
 }

@@ -6,7 +6,7 @@ export class AppService {
     return 'Hello World!';
   }
 
-  solucionarProblema(): string {  
+  solucionarProblema(): string {
     return 'Problema Solucionado!';
   }
 }
