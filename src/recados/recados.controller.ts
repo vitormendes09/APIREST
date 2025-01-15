@@ -15,31 +15,26 @@ export class RecadosController {
   constructor(private readonly recadoService: RecadoService) {}
   @Get()
   findAll(@Query() pagination: any) {
-    const { limit = 10, offset = 0 } = pagination;
-    return this.recadoService.hello;
+    return this.recadoService.findAll();
   }
 
   @Get(':id')
   findOne(@Param('id') id: any) {
-    console.log(id);
-    return `This action returns a # ${id} recado`;
+    return this.recadoService.findOne(id);
   }
 
   @Post()
-  create(@Body() createRecadoDto: any) {
-    return createRecadoDto;
+  create(@Body() body: any) {
+    return this.recadoService.create(body);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateRecadoDto: any) {
-    return {
-      id,
-      ...updateRecadoDto,
-    };
+  update(@Param('id') id: string, @Body() body: any) {
+    this.recadoService.update(id, body);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return `This action returns a # ${id} recado`;
+ this.recadoService.remove(id);
   }
 }

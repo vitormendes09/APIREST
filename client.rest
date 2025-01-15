@@ -6,7 +6,7 @@
 Get {{baseUri}}/recados
 
 
-# Recados
+
 ###
 
 GET {{baseUri}}/recados/1
@@ -16,22 +16,28 @@ GET {{baseUri}}/recados/1
 POST {{baseUri}}/recados
 Content-Type: application/json
 
-{
-    "titulo": "Recado 1",
-    "descricao": "Descrição do recado 1"
-}
+  {
+    
+    "texto": "Este é o mais novo texto 3",
+    "de": "Joao",
+    "para": "Vitor",
+    "lido": false,
+    "data": "2025-01-14T19:41:54.460Z"
+  }
 
 ###
 
-PATCH {{baseUri}}/recados/1
+PATCH {{baseUri}}/recados/2
 Content-Type: application/json
 
-{
-    "titulo": "Recado 1",
-    "descricao": "Descrição do recado 3"
-}
-
+  {
+    "texto": "Este é o texto atualizado 2" ,
+    "de": "mARIA",
+    "para": "Vitor",
+    "lido": false,
+    "data": "2025-01-14T19:41:54.460Z"
+  }
 
 ###
 
-DELETE {{{baseUri}}}/recados/1
+DELETE {{baseUri}}/recados/1
