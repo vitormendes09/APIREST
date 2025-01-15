@@ -27,11 +27,11 @@ Content-Type: application/json
 
 ###
 
-PATCH {{baseUri}}/recados/1
+PATCH {{baseUri}}/recados/4
 Content-Type: application/json
 
   {
-    "texto": "Este é o texto atualizado 2" ,
+    "texto": "Este é o texto atualizado 1" ,
     "de": "mARIA",
     "para": "Vitor",
     "lido": false,

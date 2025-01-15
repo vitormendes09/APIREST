@@ -6,6 +6,8 @@ import {
 } from '@nestjs/common';
 import { Recado } from './entities/recado.entiti';
 import { NotFoundError } from 'rxjs';
+import { CreateRecadoDto } from './dto/create-recado.dto';
+import { UpdateRecadoDto } from './dto/update-recado.dto';
 
 @Injectable()
 export class RecadoService {
@@ -38,19 +40,21 @@ export class RecadoService {
     this.throwNotFoundErro();
   }
 
-  create(body: any) {
+  create(createRecadoDto: CreateRecadoDto) {
     this.lastId++;
     const id = this.lastId;
     const newRecado = {
       id,
-      ...body,
+      ...createRecadoDto,
+      lido: false,
+      data: new Date()
     };
     this.recados.push(newRecado);
 
     return newRecado;
   }
 
-  update(id: string, body: any) {
+  update(id: string, updateRecadoDto: UpdateRecadoDto) {
     const recadoExisteIndex = this.recados.findIndex(item => item.id === +id);
 
     if (recadoExisteIndex <= 0) {
@@ -60,7 +64,7 @@ export class RecadoService {
       const recadoExiste = this.recados[recadoExisteIndex];
       this.recados[recadoExisteIndex] = {
         ...recadoExiste,
-        ...body,
+        ...updateRecadoDto,
       };
     }
 
