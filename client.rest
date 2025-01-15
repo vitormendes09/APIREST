@@ -27,7 +27,7 @@ Content-Type: application/json
 
 ###
 
-PATCH {{baseUri}}/recados/2
+PATCH {{baseUri}}/recados/1
 Content-Type: application/json
 
   {

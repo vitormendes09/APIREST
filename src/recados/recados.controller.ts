@@ -30,11 +30,11 @@ export class RecadosController {
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() body: any) {
-    this.recadoService.update(id, body);
+    return this.recadoService.update(id, body);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
- this.recadoService.remove(id);
+    return this.recadoService.remove(id);
   }
 }
